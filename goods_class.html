@@ -8,7 +8,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/goods_class.css" />
 	</head>
 	<body>
 		
@@ -37,16 +39,18 @@
 			            <li><a href="#">内容3</a></li>
 			           
 			          </ul>
+			          
 			        </li>
+			        <li><a id="nav-hot-a" href="javascript:"></a></li>
 
 			        
 			      </ul>
-			      <form class="navbar-form navbar-left">
+			      <div class="navbar-form navbar-left">
 			        <div class="form-group">
-			          <input type="text" class="form-control" placeholder="搜索内容">
+			          <input type="text" class="form-control" id="btn-value" placeholder="搜索内容">
 			        </div>
-			        <button type="button" class="btn btn-default">搜索</button>
-			      </form>
+			        <button type="button" class="btn btn-default" id="btn-search">搜索</button>
+			      </div>
 			      <ul class="nav navbar-nav navbar-right">
 			      	<li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">购物车<span class="caret"></span></a>
@@ -74,7 +78,7 @@
 			<div class="row">
 				<div class="goods">
 				
-				<div class="col-sm-6 col-md-4 col-lg-3">
+				<!--<div class="col-sm-6 col-md-4 col-lg-3">
 				    <div class="thumbnail">
 				      <img src="" alt="...">
 				      <div class="caption">
@@ -84,50 +88,59 @@
 				      </div>
 				    </div>  
 				</div>	
-				
+				-->
 				</div>
 				
 			</div>
-			
-			
+			<!--分页-->
+			<div class="row nav-div">
+				<div class="col-lg-1 col-md-4 col-sm-3"></div>
+				<div class="col-lg-10 colo-md-4 col-sm-6">
+					<!--<div class="ul-div" style="width: 100%; height: 6rem;overflow: hidden;">-->
+						
+						
+					
+					<nav aria-label="Page navigation nav-div-mid">
+				  <ul class="pagination pagination-lg paging-ul">
+				    <!--<li><a href="#" aria-label="Previous" id="ButtonPrev"><span aria-hidden="true">&laquo;</span></a></li>-->
+				   
+				    	
+				    	
+					   	<!--<li class="paging"><a href="javascript:">1</a></li>
+					    <li class="paging"><a href="javascript:">2</a></li>
+					    <li class="paging"><a href="javascript:">3</a></li>
+					    <li class="paging"><a href="javascript:">4</a></li>
+					    <li class="paging"><a href="javascript:">5</a></li>-->
+				    	
+				    
+				   
+				    
+				    <!--<li><a href="#" aria-label="Next"  id="ButtonNext"><span aria-hidden="true">&raquo;</span></a></li>-->
+				  </ul>
+				</nav>
+					
+					<!--</div>-->
+				
+				</div>
+				<div class="col-lg-1 colo-md-4 col-sm-6"></div>
+				
+			</div>
 		</div>
 		
+		<!--底部-->
+		<footer>
+			<div class="container-fluid">
+				<div class="row footer_p">
+					<p>one piece是真的存在的</p>
+					<p>警备#00000000001</p>
+				</div>
+			</div>
+		</footer>
 		
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <script type="text/javascript" src="js/bootstrap.min.js" ></script>
-<script>
-	
-	
-	$.get("http://h6.duchengjiu.top/shop/api_cat.php",function(obj){
-		console.log(obj)
-		var arr = obj.data
-		var h = ""
-		for(var i = 0;i<arr.length;i++){
-			h+='<li><a href="goods_class.html?cat_id='+ arr[i].cat_id +'">'+arr[i].cat_name+'</a></li>'
-		}
-		$("#goods_class").html(h)
-	})
-	
-	var str = location.search
-	
-	str=str.substr(8)
-	str=decodeURI(str)
-	var num = parseInt(str)
-	console.log(str)
-	
-	var url = "http://h6.duchengjiu.top/shop/api_goods.php"
-	var data = {"cat_id":num}
-	$.get(url,data,function(obj){
-		console.log(obj)
-		var arr = obj.data
-		var h = ""
-		for(var i = 0;i<arr.length;i++){
-			h+='<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail"><img src="'+arr[i].goods_thumb+'" alt="..."><div class="caption"><h3 class="h3-buhuanhang">'+ arr[i].goods_desc +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary" role="button">加入购物车</a></p> </div></div></div>'	        
-//			h+='<div  class="col-sm-6 col-md-4 col-lg-3"><a href="#" class="thumbnail"><img style="width:100%;" src="'+arr[i].goods_thumb+'" /></a></div>'
-		}
-		$(".goods").html(h)
-	})
-	
-</script>
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript" src="js/goods_class.js" ></script>
+

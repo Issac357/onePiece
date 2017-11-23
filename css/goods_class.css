@@ -1,0 +1,17 @@
+
+.paging-ul>li{
+	padding: 0;
+	text-align: center;
+}
+.paging-ul>li>a{
+	
+	width: 60px;
+	
+}
+/*.paging-ul{
+	width: auto;
+}*/
+.paging-ul>li.paging-color a{
+	background: #337ab7;
+	color: #fff;
+}

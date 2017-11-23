@@ -5,7 +5,7 @@ li{
 	list-style: none;
 }
 body { padding-top: 70px; }
-.h3-buhuanhang{
+.h3-nowrap{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -22,8 +22,45 @@ body { padding-top: 70px; }
 	width: 250px;
 	height: 250px;
 	transition: all 1s;
+	
+}
+.goods_img{
+	perspective: 700px;
 }
 .goods_img img:hover{
-	perspective: 300px;
+	/*transform: rotateX(20deg) rotateY(20deg);*/
 	box-shadow: 5px 5px 5px #ccc;
+}
+.banner img{
+	width: 100%;
+}
+.footer_p{
+	background: #080808;
+	color: #C0C0C0;
+	text-align: center;
+}
+
+
+.back{
+	width: 59px;
+	height: 59px;
+	
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	display: none;
+}
+.back a{
+	width: 59px;
+    height: 59px;
+    display: block;
+    background: url(../img/icon.png) no-repeat;
+    background-position: -20px -813px;
+}
+
+.back:hover a{
+	opacity: 0.4;
+}
+.main{
+	margin-top: 2rem;
 }
