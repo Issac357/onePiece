@@ -98,20 +98,9 @@
 </html>
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/common.js" ></script>
 <script src="js/cart.js"></script>
-<script>
-	
-	$.get("http://h6.duchengjiu.top/shop/api_cat.php",function(obj){
-		console.log(obj)
-		var arr = obj.data
-		var h = ""
-		for(var i = 0;i<arr.length;i++){
-			h+='<li><a href="goods_class.html?cat_id='+ arr[i].cat_id +'">'+arr[i].cat_name+'</a></li>'
-		}
-		$("#goods_class").html(h)
-	})
-	
-</script>
+
 
 
 

@@ -1,9 +1,113 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: #f8f8f8;
+			
+			}
+			#login{
+				width: 460px;
+				height: 550px;
+				margin: 30px auto 0;
+				background: white;
+				text-align: center;
+				border-radius: 10px;
+				border: 1px #ccc solid;
+			}
+			img{
+				margin: 50px 0 20px;
+			}
+			#username,#loginin,#password{
+				width:250px ;
+				height: 35px;
+				margin: 5px 0 5px;
+				border-radius:5px ;
+			}
+			#username,#password{
+				padding-left: 20px;
+				width: 230px;
+			}
+		</style>
 	</head>
 	<body>
+		<div id="login">
+			<a href="index.html"><img src="img/logo.png"/></a>
+			<h4>使用 Smartisan ID 登录官网</h4>
+			<p><input type="text" id="username" placeholder="用户名/邮箱"/></p>
+			
+			<p><input type="password" id="password"placeholder="密码"/></p>
+			<a href="register.html">注册 Smartisan ID</a>
+			<p><button id="loginin" >登录</button></p>
+		</div>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			if( localStorage.getItem("token") ){
+				$("body").html("<h1>" + localStorage.getItem("username") + "您已经登录成功了！</h1>")
+				
+				setTimeout(function(){
+					location.href = "index.html";
+				},2000);
+			}
+			$("#loginin").click(function(){
+				
+				var username = $('#username').val();
+				var password = $('#password').val();
+				$.ajax({
+					"url":"http://h6.duchengjiu.top/shop/api_user.php",
+					"type":"POST",
+					"dataType": "json",
+					"data": {
+						"status": "login",
+						"username": username,
+						"password": password
+					},
+					"success": function(response){
+						console.log(response);
+						if(response.code === 0){
+							var data = response.data;
+							for( property in data){
+								if(data.hasOwnProperty(property)){
+									localStorage.setItem(property,data[property]);
+								}
+								
+								
+							}
+							
+							
+							
+							alert(response.message);
+							var callbackURL = location.hash.substr(10);
+							if( callbackURL ){
+								window.location.href = callbackURL;
+							}else{
+								window.location.href = "index.html";
+							}
+							
+							
+						}
+						else if(response.code === 1001){
+							alert("密码错误")
+						}else if(response.code === 2002){
+							alert("用户名不存在")
+						}
+					}
+				});
+			})
+		</script>
 	</body>
 </html>

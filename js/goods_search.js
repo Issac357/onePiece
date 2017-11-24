@@ -17,7 +17,7 @@ var str = location.search
 //			var h = ""
 			for(var i = 0;i<arr.length;i++){
 //				h+='<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail"><img src="'+arr[i].goods_thumb+'" alt="..."><div class="caption"><h3 class="h3-nowrap">'+ arr[i].goods_desc +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary" role="button">加入购物车</a></p> </div></div></div>'	        
-				$(".goods").append('<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail goods_img"><img class="" src="'+arr[i].goods_thumb+'" alt="..."><div class="caption"><h3 class="h3-nowrap">'+ arr[i].goods_name +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary" role="button">加入购物车</a></p> </div></div></div>')       
+				$(".goods").append('<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail goods_img"><img class="" src="'+arr[i].goods_thumb+'" alt="..."><div class="caption"><h3 class="h3-nowrap">'+ arr[i].goods_name +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary cart-btn" role="button">加入购物车</a></p> </div></div></div>')       
 				
 //			h+='<div  class="col-sm-6 col-md-4 col-lg-3"><a href="#" class="thumbnail"><img style="width:100%;" src="'+arr[i].goods_thumb+'" /></a></div>'
 			}

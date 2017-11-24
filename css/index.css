@@ -19,14 +19,13 @@ body { padding-top: 70px; }
 	border-color: #ff4400;
 }
 .goods_img img{
-	width: 250px;
-	height: 250px;
+	
 	transition: all 1s;
 	
 }
-.goods_img{
+/*.goods_img{
 	perspective: 700px;
-}
+}*/
 .goods_img img:hover{
 	/*transform: rotateX(20deg) rotateY(20deg);*/
 	box-shadow: 5px 5px 5px #ccc;
