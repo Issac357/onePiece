@@ -19,13 +19,20 @@
 		var data = {"cat_id":arr1[1],"page":page,"pagesize":8}
 		$.get(url,data,function(obj){
 			console.log(obj)
+			if(obj.code==1&&page==1){
+				$(".goods").html("<h1>"+ obj.message +"</h1>")
+				return
+			}else if(obj.code==3){
+				$(".goods").html("<h1>"+ obj.message +"</h1>")
+				return
+			}
 			maxPage = obj.page.page_count
 //			$(".paging-ul").css("width",maxPage*50)
 			var arr = obj.data
 			var h = ""
 			for(var i = 0;i<arr.length;i++){
 //				$(".goods").append('<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail goods_img"><img class="" src="'+arr[i].goods_thumb+'" alt="..."><div class="caption"><h3 class="h3-nowrap">'+ arr[i].goods_name +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary" role="button">加入购物车</a></p> </div></div></div>')       
-				h+='<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail goods_img"><img src="'+arr[i].goods_thumb+'" alt="..."><div class="caption"><h3 class="h3-nowrap">'+ arr[i].goods_name +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary  cart-btn" role="button">加入购物车</a></p> </div></div></div>'
+				h+='<div class="col-sm-6 col-md-4 col-lg-3"><div class="thumbnail goods_img"><a href="goods.html?goods_id='+ arr[i].goods_id +'"><img src="'+arr[i].goods_thumb+'" alt="..."></a><div class="caption"><h3 class="h3-nowrap">'+ arr[i].goods_name +'</h3><p>￥'+ arr[i].price +'</p><p><a href="goods.html?goods_id='+ arr[i].goods_id +'" class="btn btn-primary" role="button">购买</a><a href="#" class="btn-shop btn btn-primary  cart-btn" goods_id="'+ arr[i].goods_id +'" role="button">加入购物车</a></p> </div></div></div>'
 			}
 			
 			$(".goods").html(h)

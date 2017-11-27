@@ -18,7 +18,7 @@ body{
 	border: 1px #ccc solid;
 }
 h2{
-	width: 460px;
+	width: 100%;
 	height: 60px;
 	line-height: 60px;
 	border-bottom: 1px #ccc solid;
@@ -34,14 +34,16 @@ p{
 	height: 35px;
 	margin: 10px 0 10px;
 	border-radius:5px ;
+	margin: 0 auto;
 	position: relative;
+	
 }
 #phone,#password,#re-password{
 	padding-left: 20px;
 	width: 230px;
 }
 #register{
-	background: #93c4dc;
+	/*background: #93c4dc;*/
 }
 #login{
 	display: block;

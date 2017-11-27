@@ -9,9 +9,20 @@ if( localStorage.getItem("token") ){
 				setTimeout(function(){
 					location.href = "index.html";
 				},2000);
-			}
+}
 			$("#loginin").click(function(){
+				login()
+			})
+			
+			$("#password").keydown(function(e){
 				
+				if(e.keyCode == 13){
+					
+					login()
+				}
+			})
+			
+	function login(){
 				var username = $('#username').val();
 				var password = $('#password').val();
 				$.ajax({
@@ -55,4 +66,4 @@ if( localStorage.getItem("token") ){
 						}
 					}
 				});
-			})
+			}

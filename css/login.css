@@ -23,6 +23,7 @@ img{
 	height: 35px;
 	margin: 5px 0 5px;
 	border-radius:5px ;
+	margin: 0 auto;
 }
 #username,#password{
 	padding-left: 20px;

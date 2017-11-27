@@ -99,3 +99,5 @@ function showCart(){
 $(document).keydown(function(){
 	$("#btn-value").focus()
 })
+
+

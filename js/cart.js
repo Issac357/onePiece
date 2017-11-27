@@ -20,7 +20,7 @@ var str = ""
 				for(var i = 0;i<obj2.length;i++){
 					h += `<div class="row newGoods">
 						<div class="checkAll col-lg-1 col-md-1 col-sm-1 col-xs-6">
-							<input type="checkbox" name="" class="checkbox"  />
+							<input type="checkbox" name="" class="checkbox" cart_id="${obj2[i].cart_id}" />
 							<input type="hidden" class="goods_id" value=" ${obj2[i].goods_id} "/>
 						</div>
 						<div class="message col-lg-4  col-md-4 col-sm-4 col-xs-6">
@@ -273,8 +273,30 @@ $(".choseDelate").click(function(){
 		$("#tip").fadeOut(500)
 	})
 })
+//var arr=[]
 
 $(".finish").click(function(){
-	var sum = $("#sumber").text().substr(1);
-	location.href = "order.html?sum="+sum;
+	if(!$(".choseAll").is(":checked") && !$(".checkbox").is(":checked")){
+		alert("未选择商品")
+		return
+	}
+	
+	if($(".choseAll").is(":checked")){
+		var sum = $("#sumber").text().substr(1);
+		location.href = "order.html?sum="+sum;
+	}else{
+		var str=""
+		$(".checkbox").each(function(index){
+			if($(this).is(":checked")){
+				str+="cart_id="+$(this).attr("cart_id")
+			}
+		})
+		console.log(str)
+		var sum = $("#sumber").text().substr(1);
+		location.href="checkout.html?sum="+sum+"&"+str
+	}
+	
+	
+	
+	
 })

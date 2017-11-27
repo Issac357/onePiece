@@ -4,11 +4,20 @@
 li{
 	list-style: none;
 }
+@media only screen and (min-width: 990px) {
+	body{
+		padding-top:70px ;
+	}
+}
 body { padding-top: 70px; }
 html{
 	font-size: 10px;
 }
-
+@media only screen and (min-width: 770px) and (max-width: 990px) {
+	body{
+		padding-top:120px ;
+	}
+}
 .h3-nowrap{
 	white-space: nowrap;
 	overflow: hidden;
@@ -27,9 +36,14 @@ html{
 	transition: all 1s;
 	
 }
+.goods_img{
+	padding: 10px 10px;
+	border: 1px #ccc solid;
+	margin-bottom: 10px;
+}
 .goods_img img{
 	width: 250px;
-	height: 250px;
+	height: 250px !important;
 }
 .goods_img img:hover{
 	/*transform: rotateX(20deg) rotateY(20deg);*/

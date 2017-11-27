@@ -1,0 +1,61 @@
+.message>img{
+	height: 80px;
+	/*margin-top: -30px;*/
+	float: left;
+}
+.newGoods{
+	height: 80px;
+	margin: 15px 0;
+	border: 1px #ccc solid;
+}
+.goods-name{
+	text-overflow: ellipsis;
+				overflow: hidden;
+				display: -webkit-box;
+				/*从顶部向底部垂直布置子元素*/
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 4;
+}
+.address-show{
+	border: 1px #ccc solid;
+	padding: 6px 12px;
+	margin-bottom: 10px;
+}
+.cover{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	top: 50px;left: 0;
+	display: none;
+}
+@media only screen and (min-width: 770px) and (max-width: 990px) {
+	.cover{
+		top: 100px;left: 0;
+	}
+}
+.cover-mid{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding-left:5px ;
+	background: #fff;
+	transform: translateX(-50%) translateY(-50%);
+	
+}
+.cover-close{
+	position: absolute;
+	padding: 2px;
+	background: #CCCCCC;
+	top: 0;right: 0;
+	cursor: pointer;
+}
+.cover-input{
+	
+	width: 300px;
+}
+.add-remove{
+	float: right;
+}

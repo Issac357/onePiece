@@ -7,7 +7,8 @@ body{
 #goods-left{
 	height: 400px;
 	width: 100%;
-	
+	border: 1px solid black;
+	position: relative;
 	background: #1B6D85;
 }
 #goods-right{
@@ -24,4 +25,25 @@ body{
 }
 #goods-right a{
 	margin-right: 20px;
+}
+#sDiv{
+	width: 180px;
+	height: 200px;
+	position: absolute;
+	border: 1px solid black;
+	display: none;
+	background: rgba(202,145,111,0.7);
+	
+}
+#bDiv{
+	width: 504px;
+	height: 560px;
+	position: absolute;
+	border: 1px solid black;
+	top: 0;
+	left: 361px;
+	display: none;
+	overflow: hidden;
+	z-index: 99;
+	
 }
