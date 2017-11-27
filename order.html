@@ -27,16 +27,17 @@
 			
 		</div>
 		
-		
-		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<!--<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
+			console.log(localStorage.token)
 			//查询订单详情
 			$.ajax({
 				"url":"http://h6.duchengjiu.top/shop/api_order.php?token="+localStorage.token,
 					"type":"GET",
 					"dataType": "json",
 					"success": function(response){
-						
+						console.log(response);
 						if(response.code === 0){
 							console.log(response);
 							

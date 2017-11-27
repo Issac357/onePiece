@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>购物车</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -29,7 +29,7 @@
 			
 			    
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav">
+			      <ul class="nav navbar-nav ">
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品分类<span class="caret"></span></a>
 			          <ul class="dropdown-menu" id="goods_class">
@@ -39,31 +39,35 @@
 			           
 			          </ul>
 			        </li>
-
+					<li><a id="nav-hot-a" href="javascript:">热门商品</a></li>
 			        
 			      </ul>
-			      <form class="navbar-form navbar-left">
+			      <div class="navbar-form navbar-left">
 			        <div class="form-group">
-			          <input type="text" class="form-control" placeholder="搜索内容">
+			          <input type="text" class="form-control" id="btn-value" placeholder="搜索内容">
 			        </div>
-			        <button type="button" class="btn btn-default">搜索</button>
-			      </form>
-			      <ul class="nav navbar-nav navbar-right">
+			        <button type="button" class="btn btn-default" id="btn-search">搜索</button>
+			      </div>
+			      
+			      
+			      <ul class="nav navbar-nav navbar-right ">
 			      	<li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">购物车<span class="caret"></span></a>
-			          <ul class="dropdown-menu">
+			          <a href="#" id="nav-cart-updata" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">购物车<span class="caret"></span></a>
+			          <ul class="dropdown-menu cart-mess">
 			            
 			            <!--<li role="separator" class="divider"></li>-->
-			            <li><a href="#">还没有登录</a></li>
+			            <li><a href="javascript:">还没有登录</a></li>
 			            <li role="separator" class="divider"></li>
-			            <li><a href="#">没有内容</a></li>
+			            <li><a href="javascript:">没有内容</a></li>
 			          </ul>
 			        </li>
 			      	
-			        <li><a href="login.html">登录</a></li>
-			        <li><a href="register.html">注册</a></li>
+			        <li class="login"><a href="login.html">登录</a></li>
+			        <li class="register"><a href="register.html">注册</a></li>
 			      
 			      </ul>
+			      
+			      	
 			    </div>
 			  </div>
 			</nav>
@@ -114,7 +118,7 @@
 		</div>
 		
 		<!--底部结算-->
-		<div class="container downDiv">
+		<div class="container downDiv navbar-fixed-bottom">
 			<div class="row">
 				<div class="choseDelate col-lg-1 col-md-1 col-sm-2 col-xs-2">
 					选择删除

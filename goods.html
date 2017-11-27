@@ -3,7 +3,99 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/goods.css" />
+		<link rel="stylesheet" href="css/common.css" />
 	</head>
 	<body>
+		
+		<div class="container-fluid">
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container">
+			    
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="index.html">粮仓</a>
+			    </div>
+			
+			    
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav ">
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品分类<span class="caret"></span></a>
+			          <ul class="dropdown-menu" id="goods_class">
+			            <li><a href="#">内容1</a></li>
+			            <li><a href="#">内容2</a></li>
+			            <li><a href="#">内容3</a></li>
+			           
+			          </ul>
+			        </li>
+					<li><a id="nav-hot-a" href="javascript:">热门商品</a></li>
+			        
+			      </ul>
+			      <div class="navbar-form navbar-left">
+			        <div class="form-group">
+			          <input type="text" class="form-control" id="btn-value" placeholder="搜索内容">
+			        </div>
+			        <button type="button" class="btn btn-default" id="btn-search">搜索</button>
+			      </div>
+			      
+			      
+			      <ul class="nav navbar-nav navbar-right ">
+			      	<li class="dropdown">
+			          <a href="#" id="nav-cart-updata" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">购物车<span class="caret"></span></a>
+			          <ul class="dropdown-menu cart-mess">
+			            
+			            <!--<li role="separator" class="divider"></li>-->
+			            <li><a href="javascript:">还没有登录</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="javascript:">没有内容</a></li>
+			          </ul>
+			        </li>
+			      	
+			        <li class="login"><a href="login.html">登录</a></li>
+			        <li class="register"><a href="register.html">注册</a></li>
+			      
+			      </ul>
+			      
+			      	
+			    </div>
+			  </div>
+			</nav>
+		</div>
+		
+		<!---->
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6" >
+					<div id="goods-left">
+						<div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-sm-6">
+					<div id="goods-right">
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
 	</body>
 </html>
+<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/goods.js" ></script>
+<script type="text/javascript" src="js/common.js"></script>

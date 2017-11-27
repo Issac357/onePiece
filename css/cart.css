@@ -1,4 +1,6 @@
-
+body{
+	padding-bottom: 100px;
+}
 .message>img{
 	height: 80px;
 	margin-top: -30px;
@@ -62,6 +64,7 @@
 }
 .downDiv{
 	margin-top: 40px;
+	background: #f8f8f8;
 
 }
 .downDiv>.row{

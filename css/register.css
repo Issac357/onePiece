@@ -1,0 +1,67 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: #f8f8f8;
+
+}
+
+#cont{
+	width: 460px;
+	height: 450px;
+	margin: 50px auto 0;
+	background: white;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px #ccc solid;
+}
+h2{
+	width: 460px;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px #ccc solid;
+	background: #fbfbfb;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 20px;	
+}
+p{
+	position: relative;
+}
+#phone,#password,#re-password,#register{
+	width:250px ;
+	height: 35px;
+	margin: 10px 0 10px;
+	border-radius:5px ;
+	position: relative;
+}
+#phone,#password,#re-password{
+	padding-left: 20px;
+	width: 230px;
+}
+#register{
+	background: #93c4dc;
+}
+#login{
+	display: block;
+	width: 340px;
+	margin: 20px auto 0;
+	height: 60px;
+	line-height: 60px;
+	border-top:1px #ccc solid;
+	font-size: 12px;
+}
+.success{
+	display: none;
+	position:absolute;
+	top: 15px;right: 30px;
+	color: green;
+	
+}
+.error{
+	color: red;
+	display: none;
+	position:absolute;
+	top: 15px;right: 30px;
+}

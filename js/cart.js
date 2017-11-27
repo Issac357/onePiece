@@ -1,12 +1,13 @@
 var str = ""
-$.post("http://h6.duchengjiu.top/shop/api_user.php",
-	{"status":"login","username":"13007513628","password":"jiaheng"},
-	function(obj){
-		console.log(obj)
-		str=obj.data.token
-		console.log(str)
-		var url = "http://h6.duchengjiu.top/shop/api_cart.php?token="+str;
-		console.log(url)
+//$.post("http://h6.duchengjiu.top/shop/api_user.php",
+//	{"status":"login","username":"13007513628","password":"jiaheng"},
+//	function(obj){
+//		console.log(obj)
+//		str=obj.data.token
+//		console.log(str)
+//		var url = "http://h6.duchengjiu.top/shop/api_cart.php?token="+str;
+//		console.log(url)
+	var url = "http://h6.duchengjiu.top/shop/api_cart.php?token="+token;
 		$.ajax({
 			type:"get",
 			url:url,
@@ -41,6 +42,7 @@ $.post("http://h6.duchengjiu.top/shop/api_user.php",
 				
 				$(".delate").click(function(){
 					var now = this
+					console.log(1)
 					$("#tip").fadeIn()
 					$("#yes").click(function(){
 						var goods = now.parentNode;
@@ -76,7 +78,7 @@ $.post("http://h6.duchengjiu.top/shop/api_user.php",
 				})
 			}
 		});
-	})
+//	})
 
 
 function updataCartAjax(obj,num){
@@ -88,7 +90,7 @@ function updataCartAjax(obj,num){
 //	console.log(goods_id);
 	
 	$.ajax({
-		"url": "http://h6.duchengjiu.top/shop/api_cart.php?token="+str,
+		"url": "http://h6.duchengjiu.top/shop/api_cart.php?token="+token,
 		"type": "POST",
 		"dataType": "json",
 		"data": {
