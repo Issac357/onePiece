@@ -14,8 +14,8 @@ $.get("http://h6.duchengjiu.top/shop/api_goods.php",{"goods_id":goods_id},functi
 	
 		$(".cart-btn").click(function(e){
 			e.preventDefault()
-			var goods_id = $(this).attr("goods_id")
-			console.log(goods_id)
+//			var goods_id = $(this).attr("goods_id")
+//			console.log(goods_id)
 			$.get("http://h6.duchengjiu.top/shop/api_cart.php?token="+token,function(obj){
 				console.log(obj)
 				var number = 0
